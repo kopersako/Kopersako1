@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	 <script defer src="js/fontawesome-all.js"></script>
+	 <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	 
+	<link rel="stylesheet" href="css/sigare.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/animate.css">
+
+	<title>Sait</title>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+	
+</head>
+<body>
+	<div id="preloader" class="preload">
+		<figure>
+			<div class="test"><img src="images/logo600.png" alt="" >
+		   </div>
+	   </figure>
+			
+				<div id="example"><div class="test">
+				‘‘If heaven has no cigars,<br/></div>
+				<div class="test">I shall not go there.’’</div>
+			    
+			</div>
+			<div id="example1">
+				<div class="test">
+				-Mark Twain
+			</div>
+		</div>
+	</div>
+	<nav id="conteiner2">
+		<div class="navigation"> 
+			<figure class="two">
+				<img src="images/logo600.png" alt="" >
+			</figure>
+			<div class="burger">
+				<div class="line" onclick="window.location='html/text.html';">
+				<img src="images/burger.png" alt="" >
+				</div>
+				<div class="textmenu">
+					<p>Menu</p>
+				</div>
+		</div>
+		</div>
+		<div class="slider__warpper">
+
+  <div class="flex__container flex--pikachu flex--active" data-slide="1">
+    <div class="flex__item flex__item--left">
+    	<div class="number"><svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 700 700" enable-background="new 0 0 700 700" xml:space="preserve">
+<text transform="matrix(1 0 0 1 5.769730e-005 537.9492)" fill="none" stroke="#FFFFFF" stroke-width="3.3221" font-family="'Georgia'" font-size="664.4267">01</text>
+</svg></div>
+      <div class="flex__content">
+
+      	<h1 class="text--big">I drink a greate deal,<br/>
+I sleep a little, and I<br/>
+smoke cigar after cigar.<br/>
+That is why I am in <br/>
+two-hundred-percent form.</h1>
+        <p class="text--normal">-Winston Churchill</p>
+    	</div>
+    </div>
+ </div>
+  <div class="flex__container flex--piplup animate--start" data-slide="2">
+
+    <div class="flex__item flex__item--left">
+<div class="number"><svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 700 700" enable-background="new 0 0 700 700" xml:space="preserve">
+<text transform="matrix(1 0 0 1 4.2329 506.1049)" fill="none" stroke="#FFFFFF" stroke-width="2.9568" font-family="'Georgia'" font-size="591.3615">02</text>
+</svg></div>
+      <div class="flex__content">
+       <h1 class="text--big">The cigar is the<br/>
+							perfect compliment to an<br/>
+							elegant lifestyle.<br/></h1>
+        <p class="text--normal">-George Sand</p>
+      </div>
+    </div>
+ </div>
+  
+  <div class="flex__container flex--blaziken animate--start" data-slide="3">
+    <div class="flex__item flex__item--left">
+    	<div class="number"><svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 700 700" enable-background="new 0 0 700 700" xml:space="preserve">
+<text transform="matrix(1 0 0 1 15.7798 498.8724)" fill="none" stroke="#FFFFFF" stroke-width="2.8237" font-family="'Georgia'" font-size="564.7323">03</text>
+</svg></div>
+      <div class="flex__content">
+        <h1 class="text--big1">Sometimes<br/>
+ <h1 class="text--big">a cigar<br/>
+is just a cigar<br/></h1>
+        <p class="text--normal">-Sigmund Freud</p>
+      </div>
+    </div>
+</div>
+
+<div class="slider__navi">
+  <a href="#" class="slide-nav active" data-slide="1">dfgfdg</a>
+  <a href="#" class="slide-nav" data-slide="2">fgf</a>
+  <a href="#" class="slide-nav" data-slide="3">fgf</a>
+
+</div></div>
+	</nav>
+
+	
+
+
+
+
+
+
+
+
+
+
+</body>
+<script type="text/javascript">
+	document.body.onload = function () {
+	setTimeout(function() { 
+		var preloader = document.getElementById('preloader');
+		if( !preloader.classList.contains('done') )
+		{
+			preloader.classList.add('done');
+		}
+	}, 3500);
+
+	initPhoneHovering();	
+}
+</script>
+<script>var duration = 700;
+$(".test").each(function(index) {
+    $(this).delay(duration * index).fadeIn(duration);
+});</script>
+
+
+
+<script>$('.slide-nav').on('click', function(e) {
+  e.preventDefault();
+  // get current slide
+  var current = $('.flex--active').data('slide'),
+    // get button data-slide
+    next = $(this).data('slide');
+
+  $('.slide-nav').removeClass('active');
+  $(this).addClass('active');
+
+  if (current === next) {
+    return false;
+  } else {
+    $('.slider__warpper').find('.flex__container[data-slide=' + next + ']').addClass('flex--preStart');
+    $('.flex--active').addClass('animate--end');
+    setTimeout(function() {
+      $('.flex--preStart').removeClass('animate--start flex--preStart').addClass('flex--active');
+      $('.animate--end').addClass('animate--start').removeClass('animate--end flex--active');
+    }, 800);
+  }
+});</script>
+</html>

@@ -1,0 +1,1104 @@
+@font-face {
+font-family: 'Georgia';
+src: url('../fonts/Georgia-Italic.eot?#iefix') format('embedded-opentype'),
+url('Georgia-Italic.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+*{margin:0;
+padding:0;
+}
+html,body
+{
+height: 100%;
+}
+
+.preload
+{width: 100%;
+height: 100%;
+background: url(../images/fon1.png) center center no-repeat;
+background-size: cover;
+text-align: center;
+position: fixed;
+z-index: 100;
+visibility: visible;
+opacity: 1;
+transition: all 1s ease;
+
+}
+figure
+{width: 120px;
+height: 50px;
+margin: auto;
+padding-top: 20px;
+}
+figure img
+{width: 100%;}
+
+.done {
+	opacity: 0;
+	visibility: hidden;
+	transition: all 1s ease;
+}
+
+#example
+{padding:150px 0px 0px 0px;
+display:block;
+color:white;
+width: 59%;
+margin: auto;
+color: white;
+font-size:5em;
+font-family:'Georgia';
+font-weight:normal;
+font-style:normal;}
+
+#example1
+{padding:100px 0px 0px 0px;
+display:block;
+color:white;
+width:50%;
+margin: auto;
+color: white;
+font-size:4em;
+font-family: 'Georgia';
+font-weight:normal;
+font-style:italic;}
+
+.test {
+  display: none;
+}
+
+#conteiner2
+{
+width: 100%;	
+height: 100%;
+background: black;
+background-size: cover; 
+-moz-background-size: cover; 
+-webkit-background-size: cover; 
+float: left;
+position: absolute;
+z-index: 1;
+}
+.navigation
+{
+width: 100%;
+height: 100px;
+top:0;
+left: 0;
+position: absolute;
+z-index: 999;
+}
+
+.two
+{width: 100px;
+height: 40px;
+float: right;
+margin: 30px 50px 0 0;
+padding-top: 20px;
+}
+.two:hover
+{transform: scale(1.2);
+transition: 0.5s;}
+.two img
+{width: 100%;}
+.burger
+{
+width: 100px;
+height: 40px;
+float: left;
+margin: 50px 0 0 50px;
+	}
+.line
+{width: 30%;
+height: 40px; 
+float: left;
+cursor: pointer;
+}
+.line:hover
+{transform: scale(1.2);
+transition: 0.5s;}
+.line img
+{width: 100%;}
+.textmenu
+{
+width: 60%;
+height: 40px;
+margin-left: 8%;
+float: left;
+text-align: center;
+}
+.textmenu p
+{
+margin: auto;
+color: white;
+font-size:1.5em;
+font-family:'Georgia';
+font-weight:normal;
+font-style:normal;
+
+}
+
+.number
+{width:200px;
+height: 250px;
+margin-right:250px;
+margin-top:-140px;
+position: absolute;
+right: 0;
+animation: animate 10s infinite;
+stroke:#f9a42a;
+stroke-dasharray: 2000;
+}
+@keyframes animate{
+0%
+{
+stroke-dashoffset: 0; }
+50%
+{opacity: 10;
+fill: none;
+stroke-dashoffset:1400; }
+100%
+{
+stroke-dashoffset:0; }
+}
+}
+
+
+
+
+*, *:before, *:after 
+{
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+
+.slider__navi {
+
+position: absolute;
+top:50%;
+right: 100px;
+z-index: 999;
+}
+ .b
+
+{
+width: 130px;
+height: 120px;
+position: absolute;
+top:50%;
+right: 100px;
+background-color: red;	
+background-repeat: no-repeat;
+}
+.slider__warpper
+{width: 100%;
+height: auto;
+float: left;}
+
+ .slider__navi a {
+display: block;
+height: 15px;
+width: 15px;
+margin: 20px 0;
+text-indent: -9999px;
+box-shadow: none;
+border: 1.5px solid white;
+
+}
+
+ .slider__navi a.active {
+background: rgba(255,255,255,0.8);
+transition: 2s;
+transform:scale(1.2);
+}
+
+
+
+.flex__container {
+position: absolute;
+top: 0;
+left: 0;
+display: flex;
+display: -webkit-flex;
+display: -moz-flex;
+display: -ms-flex;
+-webkit-flex-flow: row wrap;
+-moz-flex-flow: row wrap;
+-ms-flex-flow: row wrap;
+-o-flex-flow: row wrap;
+flex-flow: row wrap; 
+-webkit-justify-content: flex-start;
+-moz-justify-content: flex-start;
+-ms-justify-content: flex-start;
+-o-justify-content: flex-start;
+justify-content: flex-start;
+height: 100vh;
+width: 100%;
+z-index: 1;
+}
+
+.flex__container.flex--active {
+	z-index: 2;
+}
+.text--big  {
+font-size:2.5em;
+font-family:'Georgia';
+font-weight:normal;
+font-style:normal;
+}
+.text--big1 {
+color: white;
+font-size:4em;
+font-family:'Georgia';
+font-weight:normal;
+font-style:normal;
+}
+.text--normal {
+color: white;
+font-size:2em;
+margin: 30px auto auto 150px;
+font-family: 'Georgia';
+font-weight:normal;
+font-style:italic;;
+}
+.flex__item {
+height: 100%;
+color: #fff;
+transition: transform 0.8s linear;
+}
+.flex__item--left {
+display: flex;
+display: -webkit-flex;
+display: -moz-flex;
+display: -ms-flex;
+align-items: center;
+-webkit-align-items: center;
+-moz-align-items: center;
+-ms-align-items: center;
+width:100%;
+float: left;
+transform-origin: left bottom;
+transition: transform 0.3s linear 0.8s;
+opacity: 0;
+position: relative;
+overflow: hidden;
+}
+.flex--preStart .flex__item--left,
+.flex--preStart .flex__item--right,
+.flex--active .flex__item--left,
+.flex--active .flex__item--right {
+	opacity: 1;
+}
+
+/* Piplup */
+.flex--piplup .flex__item--left {
+width: 100%;	
+height: 100%;
+background: url(../images/fon3.png) center center no-repeat;
+background-size: cover; 
+-moz-background-size: cover; 
+-webkit-background-size: cover; 
+float: left;
+}
+
+
+/* Pikachu */
+
+.flex--pikachu .flex__item--left {
+width: 100%;	
+height: 100%;
+background: url(../images/fon2.png) center center no-repeat;
+background-size: cover; 
+-moz-background-size: cover; 
+-webkit-background-size: cover; 
+float: left;
+}
+
+
+
+/* Blaziken */
+
+.flex--blaziken .flex__item--left {
+width: 100%;	
+height: 100%;
+background: url(../images/fon4.png) center center no-repeat;
+background-size: cover; 
+-moz-background-size: cover; 
+-webkit-background-size: cover; 
+float: left;
+}
+
+
+/* Dialga */
+
+
+.flex__content {
+margin-left: 150px;
+margin-top: 350px;
+width: 55%;
+opacity: 1;
+transform: translate3d(0,0,0);
+transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1); 
+}
+
+.pokemon__img {
+	position: absolute;
+	bottom: 20px;
+	right: 15%;
+	max-height: 40vw;
+	opacity: 1;
+	transform: translate3d(0,0,0);
+	transition: opacity 0.43s 0.6s, transform 0.4s 0.65s cubic-bezier(0, 0.88, 0.4, 0.93);
+}
+
+/* Animate-START point */
+
+.flex__container.animate--start .flex__content {
+	transform: translate3d(0,-200%,0);
+	opacity: 0;
+}
+
+.flex__container.animate--start .pokemon__img {
+	transform: translate3d(-200px,0,0);
+	opacity: 0;
+}
+
+/* Animate-END point */
+
+.flex__container.animate--end .flex__item--left {
+	opacity: 0;
+	transition: all 0.4s ease-in-out;
+}
+
+/*.flex__container.animate--end .flex__item--right {
+	transform: scaleX(0);
+}
+*/
+.flex__container.animate--end .flex__content {
+	transform: translate3d(0,200%,0);
+	opacity: 0;
+	transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.flex__container.animate--end .pokemon__img {
+	transform: translate3d(200px,0,0);
+	opacity: 0;
+}
+@media only screen and (min-width : 320px) and (max-width : 480px)
+{
+
+.preload
+{width: 100%;
+height:100vh;
+background: url(../images/fon1.png) center center no-repeat;
+background-size: cover;
+text-align: center;
+position: fixed;
+z-index: 100;
+visibility: visible;
+opacity: 1;
+transition: all 1s ease;
+
+}
+figure
+{width: 80px;
+height: 40px;
+margin: auto;
+padding-top: 20px;
+}
+figure img
+{width: 100%;}
+
+.done {
+opacity: 0;
+visibility: hidden;
+transition: all 1s ease;
+}
+
+#example
+{padding:40px 0px 0px 0px;
+display:block;
+color:white;
+width:80%;
+margin: auto;
+color: white;
+font-size:2em;
+font-family:'Georgia';
+font-weight:normal;
+font-style:normal;}
+
+#example1
+{padding:20px 0px 0px 0px;
+display:block;
+color:white;
+width:80%;
+margin: auto;
+color: white;
+font-size:2em;
+font-family: 'Georgia';
+font-weight:normal;
+font-style:italic;}
+.test {
+  display: none;
+}
+
+#conteiner2
+{
+width: 100%;	
+height:100vh;
+background: black;
+background-size: cover; 
+-moz-background-size: cover; 
+-webkit-background-size: cover; 
+float: left;
+position: absolute;
+z-index: 1;
+}
+.navigation
+{
+width: 100%;
+height: 50px;
+top:0;
+left: 0;
+position: absolute;
+z-index: 999;
+}
+
+.two
+{width: 50px;
+height: 20px;
+float: right;
+margin: 10px 50px 0 0;
+padding-top: 20px;
+}
+
+.two img
+{width: 100%;}
+.burger
+{
+width: 50px;
+height: 20px;
+float: left;
+margin: 30px 0 0 50px;
+}
+.line
+{width: 30%;
+height: 20px; 
+float: left;
+cursor: pointer;
+}
+
+.line img
+{width: 100%;}
+.textmenu
+{
+width: 60%;
+height: 20px;
+margin-left: 8%;
+float: left;
+text-align: center;
+}
+.textmenu p
+{
+margin: auto;
+color:white;
+font-size:1em;
+font-family:'Georgia';
+font-weight:normal;
+font-style:normal;
+
+}
+.number
+{width:100px;
+height: 150px;
+margin-right:50px;
+margin-top:-30px;
+position: absolute;
+right: 0;
+animation: animate 10s infinite;
+stroke:#f9a42a;
+stroke-dasharray: 2000;
+}
+@keyframes animate{
+0%
+{
+stroke-dashoffset: 0; }
+50%
+{opacity: 10;
+fill: none;
+stroke-dashoffset:1400; }
+100%
+{
+stroke-dashoffset:0; }
+}
+
+
+*, *:before, *:after 
+{
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+.slider__navi {
+position: absolute;
+top:40%;
+right: 20px;
+z-index: 999;
+}
+.b
+{
+width: 130px;
+height: 120px;
+position: absolute;
+top:20%;
+right: 100px;
+background-repeat: no-repeat;
+}
+
+
+.slider__navi a {
+display: block;
+height:10px;
+width: 10px;
+margin: 10px 0;
+text-indent: -9999px;
+box-shadow: none;
+border: 1.5px solid white;
+
+}
+
+.slider__navi a.active {
+background: rgba(255,255,255,0.8);
+transition: 2s;
+}
+
+div.flex__container {
+position: absolute;
+top: 0;
+left: 0;
+display: flex;
+display: -webkit-flex;
+display: -moz-flex;
+display: -ms-flex;
+-webkit-flex-flow: row wrap;
+-moz-flex-flow: row wrap;
+-ms-flex-flow: row wrap;
+-o-flex-flow: row wrap;
+flex-flow: row wrap; 
+-webkit-justify-content: flex-start;
+-moz-justify-content: flex-start;
+-ms-justify-content: flex-start;
+-o-justify-content: flex-start;
+justify-content: flex-start;
+height: auto;
+width: 100%;
+z-index: 1;
+}
+
+.flex__container.flex--active {
+	z-index: 2;
+}
+.text--big {
+color: white;
+font-size:1em;
+font-family:'Georgia';
+font-weight:normal;
+font-style:normal;
+
+}
+.text--big1 {
+color: white;
+font-size:1em;
+font-family:'Georgia';
+font-weight:normal;
+font-style:normal;
+}
+.text--normal {
+color: white;
+font-size:0.5em;
+margin: 5px auto auto 30px;
+font-family: 'Georgia';
+font-weight:normal;
+font-style:italic;;
+}
+.flex__item {
+height: 100%;
+color: #fff;
+transition: transform 0.8s linear;
+}
+.flex__item--left {
+display: flex;
+display: -webkit-flex;
+display: -moz-flex;
+display: -ms-flex;
+align-items: center;
+-webkit-align-items: center;
+-moz-align-items: center;
+-ms-align-items: center;
+width:100%;
+float: left;
+transform-origin: left bottom;
+transition: transform 0.3s linear 0.8s;
+opacity: 0;
+position: relative;
+overflow: hidden;
+}
+.flex--preStart .flex__item--right,
+.flex--active .flex__item--left,
+.flex--active .flex__item--right {
+	opacity: 1;
+}
+.flex--piplup .flex__item--left {
+width: 100%;	
+height: 100vh;
+background: url(../images/fon3.png) center center no-repeat;
+background-size: cover; 
+-moz-background-size: cover; 
+-webkit-background-size: cover; 
+float: left;
+}
+
+
+.flex--pikachu .flex__item--left {
+width: 100%;	
+height: 100vh;
+background: url(../images/fon2.png) center center no-repeat;
+background-size: cover; 
+-moz-background-size: cover; 
+-webkit-background-size: cover; 
+float: left;
+}
+
+
+.flex--blaziken .flex__item--left {
+width: 100%;	
+height: 100vh;
+background: url(../images/fon4.png) center center no-repeat;
+background-size: cover; 
+-moz-background-size: cover; 
+-webkit-background-size: cover; 
+float: left;
+}
+
+div .flex__content {
+margin-left: 50px;
+margin-top: 150px;
+width:80%;
+opacity: 1;
+transform: translate3d(0,0,0);
+transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1); 
+}
+
+.pokemon__img {
+position: absolute;
+bottom: 20px;
+right: 15%;
+opacity: 1;
+transform: translate3d(0,0,0);
+transition: opacity 0.43s 0.6s, transform 0.4s 0.65s cubic-bezier(0, 0.88, 0.4, 0.93);
+}
+
+
+.flex__container.animate--start .flex__content {
+	transform: translate3d(0,-200%,0);
+	opacity: 0;
+}
+
+.flex__container.animate--start .pokemon__img {
+	transform: translate3d(-200px,0,0);
+	opacity: 0;
+}
+
+
+.flex__container.animate--end .flex__item--left {
+	opacity: 0;
+	transition: all 0.4s ease-in-out;
+}
+
+.flex__container.animate--end .flex__content {
+	transform: translate3d(0,200%,0);
+	opacity: 0;
+	transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.flex__container.animate--end .pokemon__img {
+	transform: translate3d(200px,0,0);
+	opacity: 0;
+}
+
+.slider__warpper
+{width: 100%;
+height: auto;
+float: left;}
+
+
+
+
+
+}
+
+/*@media all (width: 420px) {
+	div.test
+	{
+		color: orange
+	}
+	
+}
+
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+
+.preload
+{width: 100%;
+height:100vh;
+background: url(../images/fon1.png) center center no-repeat;
+background-size: cover;
+text-align: center;
+position: fixed;
+z-index: 100;
+visibility: visible;
+opacity: 1;
+transition: all 1s ease;
+
+}
+figure
+{width: 80px;
+height: 40px;
+margin: auto;
+padding-top: 20px;
+}
+figure img
+{width: 100%;}
+
+.done {
+opacity: 0;
+visibility: hidden;
+transition: all 1s ease;
+}
+
+#example
+{padding:40px 0px 0px 0px;
+display:block;
+color:white;
+width:80%;
+margin: auto;
+color: white;
+font-size:2em;
+font-family:'Georgia';
+font-weight:normal;
+font-style:normal;}
+
+#example1
+{padding:20px 0px 0px 0px;
+display:block;
+color:white;
+width:80%;
+margin: auto;
+color: white;
+font-size:2em;
+font-family: 'Georgia';
+font-weight:normal;
+font-style:italic;}
+
+.test {
+  display: none;
+}
+
+#conteiner2
+{
+width: 100%;	
+height:100vh;
+background: black;
+background-size: cover; 
+-moz-background-size: cover; 
+-webkit-background-size: cover; 
+float: left;
+position: absolute;
+z-index: 1;
+}
+.navigation
+{
+width: 100%;
+height: 50px;
+top:0;
+left: 0;
+position: absolute;
+z-index: 999;
+}
+
+.two
+{width: 50px;
+height: 20px;
+float: right;
+margin: 10px 50px 0 0;
+padding-top: 20px;
+}
+
+.two img
+{width: 100%;}
+.burger
+{
+width: 50px;
+height: 20px;
+float: left;
+margin: 30px 0 0 50px;
+	}
+.line
+{width: 30%;
+height: 20px; 
+float: left;
+cursor: pointer;
+}
+
+.line img
+{width: 100%;}
+.textmenu
+{
+width: 60%;
+height: 20px;
+margin-left: 8%;
+float: left;
+text-align: center;
+}
+.textmenu p
+{
+margin: auto;
+color:white;
+font-size:1em;
+font-family:'Georgia';
+font-weight:normal;
+font-style:normal;
+
+}
+.number
+{width:100px;
+height: 150px;
+margin-right:50px;
+margin-top:-30px;
+position: absolute;
+right: 0;
+animation: animate 10s infinite;
+stroke:#f9a42a;
+stroke-dasharray: 2000;
+}
+@keyframes animate{
+0%
+{
+stroke-dashoffset: 0; }
+50%
+{opacity: 10;
+fill: none;
+stroke-dashoffset:1400; }
+100%
+{
+stroke-dashoffset:0; }
+}
+}
+
+*, *:before, *:after 
+{
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+.slider__navi {
+position: absolute;
+top:40%;
+right: 20px;
+z-index: 999;
+}
+.b
+{
+width: 130px;
+height: 120px;
+position: absolute;
+top:20%;
+right: 100px;
+background-repeat: no-repeat;
+}
+
+
+.slider__navi a {
+display: block;
+height:10px;
+width: 10px;
+margin: 10px 0;
+text-indent: -9999px;
+box-shadow: none;
+border: 1.5px solid white;
+
+}
+
+.slider__navi a.active {
+background: rgba(255,255,255,0.8);
+transition: 2s;
+}
+
+div.flex__container {
+position: absolute;
+top: 0;
+left: 0;
+display: flex;
+display: -webkit-flex;
+display: -moz-flex;
+display: -ms-flex;
+-webkit-flex-flow: row wrap;
+-moz-flex-flow: row wrap;
+-ms-flex-flow: row wrap;
+-o-flex-flow: row wrap;
+flex-flow: row wrap; 
+-webkit-justify-content: flex-start;
+-moz-justify-content: flex-start;
+-ms-justify-content: flex-start;
+-o-justify-content: flex-start;
+justify-content: flex-start;
+height: auto;
+width: 100%;
+z-index: 1;
+}
+
+.flex__container.flex--active {
+	z-index: 2;
+}
+div.text--big {
+color: white;
+font-size:1em;
+font-family:'Georgia';
+font-weight:normal;
+font-style:normal;
+
+}
+div.text--big1 {
+color: white;
+font-size:1em;
+font-family:'Georgia';
+font-weight:normal;
+font-style:normal;
+}
+div.text--normal {
+color: white;
+font-size:0.5em;
+margin: 5px auto auto 30px;
+font-family: 'Georgia';
+font-weight:normal;
+font-style:italic;;
+}
+.flex__item {
+height: 100%;
+color: #fff;
+transition: transform 0.8s linear;
+}
+.flex__item--left {
+display: flex;
+display: -webkit-flex;
+display: -moz-flex;
+display: -ms-flex;
+align-items: center;
+-webkit-align-items: center;
+-moz-align-items: center;
+-ms-align-items: center;
+width:100%;
+float: left;
+transform-origin: left bottom;
+transition: transform 0.3s linear 0.8s;
+opacity: 0;
+position: relative;
+overflow: hidden;
+}
+.flex--preStart .flex__item--right,
+.flex--active .flex__item--left,
+.flex--active .flex__item--right {
+	opacity: 1;
+}
+.flex--piplup .flex__item--left {
+width: 100%;	
+height: 100vh;
+background: url(../images/fon3.png) center center no-repeat;
+background-size: cover; 
+-moz-background-size: cover; 
+-webkit-background-size: cover; 
+float: left;
+}
+
+
+.flex--pikachu .flex__item--left {
+width: 100%;	
+height: 100vh;
+background: url(../images/fon2.png) center center no-repeat;
+background-size: cover; 
+-moz-background-size: cover; 
+-webkit-background-size: cover; 
+float: left;
+}
+
+
+.flex--blaziken .flex__item--left {
+width: 100%;	
+height: 100vh;
+background: url(../images/fon4.png) center center no-repeat;
+background-size: cover; 
+-moz-background-size: cover; 
+-webkit-background-size: cover; 
+float: left;
+}
+
+div .flex__content {
+margin-left: 50px;
+margin-top: 150px;
+width:80%;
+opacity: 1;
+transform: translate3d(0,0,0);
+transition: transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1); 
+}
+
+.pokemon__img {
+position: absolute;
+bottom: 20px;
+right: 15%;
+opacity: 1;
+transform: translate3d(0,0,0);
+transition: opacity 0.43s 0.6s, transform 0.4s 0.65s cubic-bezier(0, 0.88, 0.4, 0.93);
+}
+
+
+.flex__container.animate--start .flex__content {
+	transform: translate3d(0,-200%,0);
+	opacity: 0;
+}
+
+.flex__container.animate--start .pokemon__img {
+	transform: translate3d(-200px,0,0);
+	opacity: 0;
+}
+
+
+.flex__container.animate--end .flex__item--left {
+	opacity: 0;
+	transition: all 0.4s ease-in-out;
+}
+
+.flex__container.animate--end .flex__content {
+	transform: translate3d(0,200%,0);
+	opacity: 0;
+	transition: all 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.flex__container.animate--end .pokemon__img {
+	transform: translate3d(200px,0,0);
+	opacity: 0;
+}
+
+
+
+
+
+
+/*}*/
+
+*/
